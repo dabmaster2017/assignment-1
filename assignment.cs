@@ -104,8 +104,12 @@ public class Program
 				{
 					Console.WriteLine("\n\nInvalid input. Please enter numbers from 0-2. (KEY: 0=first row, 2= last row)");
 				}
+				else if (grid[num1, num2] != "_")
+           			{
+               				Console.WriteLine("\n\nThis square has already been chose! Please choose another one that is empty.");
+            			}
 
-			} while (canConvert == false || num1 > 2 || num1 < 0|| num2 < 0|| num2 > 2 && row != "M" && place != "M");
+			} while (canConvert == false || num1 > 2 || num1 < 0|| num2 < 0|| num2 > 2 && row != "M" && place != "M" || (grid[num1, num2] != "_"));
 			
 				
 			if (p1 == true)
